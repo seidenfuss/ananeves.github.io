@@ -2,117 +2,162 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Ana Neves | Pesquisadora em Inteligência Artificial e Educação Científica</title>
+<title>Ana Neves | IA e Educação Científica</title>
 
 <style>
 
-body {
-font-family: Arial, sans-serif;
+body{
 margin:0;
+font-family: 'Segoe UI', Arial, sans-serif;
 background:#f4f6f8;
 color:#333;
 }
 
-header {
-background:#0b3d91;
-color:white;
-padding:40px 20px;
-text-align:center;
+/* HERO SECTION */
+
+.hero{
+height:420px;
+background-image:url("hero.jpg"); /* imagem de capa */
+background-size:cover;
+background-position:center;
 position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
 }
 
-header img {
-width:140px;
+.hero::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(11,61,145,0.75);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+}
+
+.profile{
+width:160px;
+height:160px;
 border-radius:50%;
+border:4px solid white;
+object-fit:cover;
 margin-bottom:15px;
 }
 
-header h1 {
+.hero h1{
 margin:0;
-font-size:32px;
+font-size:36px;
 }
 
-header p {
-margin-top:10px;
+.hero p{
 font-size:18px;
 max-width:700px;
-margin-left:auto;
-margin-right:auto;
-}
-
-.lang {
-position:absolute;
-top:15px;
-right:20px;
-}
-
-.lang a {
-color:white;
-margin-left:10px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.container {
-max-width:900px;
 margin:auto;
-padding:30px 20px;
+margin-top:10px;
 }
 
-section {
+/* CONTAINER */
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+/* CARDS */
+
+.card{
 background:white;
 padding:25px;
-margin-bottom:25px;
-border-radius:10px;
-box-shadow:0 4px 12px rgba(0,0,0,0.08);
-transition:0.2s;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+transition:0.3s;
 }
 
-section:hover {
-transform:translateY(-4px);
-box-shadow:0 8px 20px rgba(0,0,0,0.12);
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
-h2 {
+.card img{
+width:100%;
+border-radius:8px;
+margin-bottom:15px;
+}
+
+/* TITLES */
+
+h2{
 color:#0b3d91;
 margin-top:0;
 }
 
-ul {
-padding-left:20px;
+/* PROJECT CARDS */
+
+.project{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+transition:0.3s;
 }
 
-a {
-color:#0b3d91;
+.project:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
-.button {
+.project img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.project-content{
+padding:20px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+background:#0b3d91;
+color:white;
+margin-top:40px;
+}
+
+/* BUTTON */
+
+.button{
 display:inline-block;
 margin-top:15px;
-background:white;
-color:#0b3d91;
-padding:10px 18px;
+background:#0b3d91;
+color:white;
+padding:12px 20px;
 border-radius:6px;
 text-decoration:none;
 font-weight:bold;
-border:2px solid white;
 }
 
-.button:hover {
+.button:hover{
 background:#082c66;
-color:white;
-}
-
-footer {
-text-align:center;
-padding:20px;
-color:#666;
-font-size:14px;
-}
-
-.highlight {
-font-weight:bold;
-color:#0b3d91;
 }
 
 </style>
@@ -121,267 +166,176 @@ color:#0b3d91;
 
 <body>
 
-<header>
+<!-- HERO -->
 
-<div class="lang">
-<a href="index.html">PT</a>
-<a href="en.html">EN</a>
-<a href="es.html">ES</a>
-</div>
+<section class="hero">
 
-<!-- opcional: adicionar foto -->
-<!-- <img src="profile.jpg"> -->
+<div class="hero-content">
+
+<img src="profile.jpg" class="profile">
 
 <h1>Ana Neves</h1>
 
 <p>
-
-Pesquisadora em Inteligência Artificial e Educação Científica | Física | Análise de Dados | 
-Aplicação de tecnologia para transformar a educação e ampliar o acesso à ciência
-
+Pesquisadora em Inteligência Artificial e Educação Científica <br>
+Utilizando tecnologia para transformar o ensino de Física e ampliar o acesso à ciência
 </p>
 
 <a href="cv.pdf" class="button">Download CV</a>
 
-</header>
+</div>
+
+</section>
 
 
 <div class="container">
 
+<!-- MISSÃO -->
 
-<section>
+<div class="card">
 
 <h2>Missão</h2>
 
 <p>
 
-Minha missão é utilizar tecnologia, Inteligência Artificial e análise de dados para tornar a Física e as Ciências mais acessíveis, significativas e inspiradoras para os estudantes.
+Utilizar Inteligência Artificial, análise de dados e tecnologia educacional para tornar a Física e as Ciências mais acessíveis, envolventes e transformadoras.
 
-Busco desenvolver soluções que despertem o interesse pela ciência, promovam o pensamento crítico e ampliem oportunidades, especialmente para estudantes de grupos historicamente sub-representados, apoiando-os na construção de trajetórias acadêmicas e profissionais em áreas científicas e tecnológicas.
-
-Acredito que a educação científica, aliada à tecnologia, pode transformar vidas, reduzir desigualdades e capacitar novas gerações a participar ativamente do desenvolvimento científico e tecnológico.
+Meu objetivo é apoiar estudantes — especialmente de grupos sub-representados — a desenvolver confiança, interesse e oportunidades em carreiras científicas e tecnológicas.
 
 </p>
 
-</section>
+</div>
 
 
-<section>
+<!-- GRID -->
 
-<h2>Perfil</h2>
+<div class="grid">
+
+<div class="card">
+
+<img src="ai.jpg">
+
+<h2>Pesquisa</h2>
 
 <p>
 
-Pesquisadora com formação em Física e Engenharia Elétrica, com especialização em Inteligência Artificial e experiência em análise de dados, processamento de sinais e educação científica.
-
-Atua no desenvolvimento e aplicação de métodos computacionais para análise de dados fisiológicos, aprendizado de máquina e soluções educacionais baseadas em tecnologia.
-
-Possui experiência em pesquisa, ensino de Física no ensino médio e desenvolvimento de recursos educacionais voltados ao engajamento dos estudantes e à integração entre ciência, tecnologia e educação.
+Aplicação de Machine Learning na análise de sinais fisiológicos, processamento de dados e desenvolvimento de soluções baseadas em IA para saúde e educação.
 
 </p>
 
-</section>
+</div>
 
 
-<section>
+<div class="card">
 
-<h2>Interesses de Pesquisa</h2>
+<img src="teaching.jpg">
 
-<ul>
-
-<li>Aplicação de Inteligência Artificial na análise de sinais fisiológicos</li>
-
-<li>Detecção de estresse utilizando dados biométricos</li>
-
-<li>Machine Learning aplicado à análise de dados experimentais</li>
-
-<li>Processamento e análise de sinais</li>
-
-<li>Aplicações de Inteligência Artificial na educação</li>
-
-<li>Tecnologia educacional e análise de aprendizagem</li>
-
-<li>Uso de dados e tecnologia para melhorar o engajamento em Física e Ciências</li>
-
-<li>Ampliação do acesso à ciência e à educação científica</li>
-
-</ul>
-
-</section>
-
-
-<section>
-
-<h2>Competências Técnicas</h2>
-
-<ul>
-
-<li><span class="highlight">Programação:</span> Python</li>
-
-<li><span class="highlight">Análise de dados:</span> Pandas, NumPy, Matplotlib</li>
-
-<li><span class="highlight">Machine Learning:</span> Scikit-learn</li>
-
-<li><span class="highlight">Processamento de sinais</span></li>
-
-<li><span class="highlight">Ferramentas:</span> Git, GitHub</li>
-
-<li><span class="highlight">Desenvolvimento web:</span> HTML, CSS</li>
-
-<li><span class="highlight">Tecnologias educacionais</span></li>
-
-<li><span class="highlight">Idiomas:</span> Português, Inglês</li>
-
-</ul>
-
-</section>
-
-
-<section>
-
-<h2>Formação Acadêmica</h2>
-
-<ul>
-
-<li>Especialização em Inteligência Artificial — Universidade Federal do Maranhão</li>
-
-<li>Licenciatura em Ciências da Natureza — SESI/SP</li>
-
-<li>Mestrado em Engenharia Elétrica — PUCRS</li>
-
-<li>Bacharelado em Física — PUCRS</li>
-
-</ul>
-
-</section>
-
-
-<section>
-
-<h2>Experiência Profissional</h2>
-
-<ul>
-
-<li>
-
-<strong>Professora de Física — Ensino Médio</strong><br>
-
-Ensino de Física com foco no desenvolvimento do pensamento científico, resolução de problemas e integração de tecnologia no processo de aprendizagem.
-
-</li>
-
-<br>
-
-<li>
-
-<strong>Pesquisadora em Análise e Processamento de Dados — PUCRS</strong><br>
-
-Desenvolvimento de atividades de pesquisa envolvendo análise de dados, processamento de sinais e aplicação de métodos computacionais.
-
-</li>
-
-<br>
-
-<li>
-
-<strong>Agente Censitária Municipal — IBGE</strong><br>
-
-Coleta, organização e análise de dados populacionais, contribuindo para a produção de informações estatísticas oficiais.
-
-</li>
-
-</ul>
-
-</section>
-
-
-<section>
-
-<h2>Projetos</h2>
-
-<ul>
-
-<li>Pesquisa em detecção de estresse utilizando sinais fisiológicos e aprendizado de máquina</li>
-
-<li>Desenvolvimento de soluções baseadas em Inteligência Artificial para análise de dados</li>
-
-<li>Criação de recursos educacionais para ensino de Física</li>
-
-<li>Aplicação de tecnologia e dados no contexto educacional</li>
-
-<li>Projetos voltados ao aumento do engajamento de estudantes em ciência</li>
-
-</ul>
-
-</section>
-
-
-<section>
-
-<h2>Ensino e Impacto Educacional</h2>
+<h2>Educação</h2>
 
 <p>
 
-Atuação no ensino de Física com foco em tornar a ciência acessível, compreensível e relevante para os estudantes.
-
-Desenvolvimento de estratégias pedagógicas que utilizam tecnologia, dados e metodologias ativas para aumentar o interesse e a confiança dos estudantes em sua capacidade de aprender ciência.
-
-Compromisso com a promoção da equidade na educação e com o incentivo à participação de estudantes de diferentes origens em carreiras científicas e tecnológicas.
+Ensino de Física com uso de tecnologia, dados e metodologias inovadoras para aumentar o engajamento e a compreensão dos estudantes.
 
 </p>
 
-</section>
+</div>
 
 
-<section>
+<div class="card">
 
-<h2>Portfólio Técnico</h2>
+<img src="technology.jpg">
+
+<h2>Tecnologia</h2>
 
 <p>
 
-Projetos e pesquisas disponíveis em:
+Desenvolvimento de projetos utilizando Python, análise de dados, processamento de sinais e Inteligência Artificial.
 
 </p>
+
+</div>
+
+</div>
+
+
+<!-- PROJETOS -->
+
+<h2 style="margin-top:40px;">Projetos</h2>
+
+<div class="grid">
+
+<div class="project">
+
+<img src="project1.jpg">
+
+<div class="project-content">
+
+<h3>Detecção de Estresse com IA</h3>
 
 <p>
 
-GitHub:  
-<a href="https://github.com/seidenfuss" target="_blank">
-github.com/seidenfuss
-</a>
+Aplicação de Machine Learning para análise de sinais fisiológicos e identificação de padrões relacionados ao estresse.
 
 </p>
 
-</section>
+</div>
+
+</div>
 
 
-<section>
+<div class="project">
+
+<img src="project2.jpg">
+
+<div class="project-content">
+
+<h3>Educação em Física com Tecnologia</h3>
+
+<p>
+
+Desenvolvimento de estratégias e recursos digitais para aumentar o interesse dos estudantes em Física.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<img src="project3.jpg">
+
+<div class="project-content">
+
+<h3>Análise de Dados Científicos</h3>
+
+<p>
+
+Uso de Python e técnicas de análise de dados em aplicações científicas e educacionais.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CONTATO -->
+
+<div class="card" style="margin-top:40px;">
 
 <h2>Contato</h2>
 
-<p>
+<p>Email: seidenfussbender@gmail.com</p>
 
-Email:  
-<a href="mailto:seidenfussbender@gmail.com">
-seidenfussbender@gmail.com
-</a>
+<p>GitHub: github.com/seidenfuss</p>
 
-</p>
+<p>LinkedIn: linkedin.com/in/anaseidenfuss</p>
 
-<p>
-
-LinkedIn:  
-<a href="https://linkedin.com/in/anaseidenfuss" target="_blank">
-linkedin.com/in/anaseidenfuss
-</a>
-
-</p>
-
-<p>
-Localização: Brasil
-</p>
-
-</section>
+</div>
 
 
 </div>
@@ -389,10 +343,9 @@ Localização: Brasil
 
 <footer>
 
-© 2026 Ana Neves
+© 2026 Ana Neves | Inteligência Artificial e Educação Científica
 
 </footer>
-
 
 </body>
 </html>
